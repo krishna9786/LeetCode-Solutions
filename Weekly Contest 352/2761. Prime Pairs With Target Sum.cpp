@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<vector<int>> findPrimePairs(int n) {
-        //first calculate the prime  number
+        //first calculate the prime number
        vector <bool> prime(n+1, 1);
         for(int i = 2; i <= n; i++) {
             if(prime[i] == 0) continue;
