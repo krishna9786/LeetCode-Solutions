@@ -12,16 +12,16 @@ iteratively adjusting the counts to achieve the desired result.
 
 class Solution {
 public:
-    int minOperations(std::vector<int>& nums, int target) {
+    int minOperations(vector<int>& nums, int target) {
         // Initialize an array to store counts of numbers with the same highest set bit position
-        std::vector<int> c(31, 0);
+        vector<int> c(31, 0);
         long long s = 0;
         int n = nums.size();
 
         // Calculate the sum of all numbers in the 'nums' vector
         for (int i = 0; i < n; ++i) {
             int x = nums[i];
-            c[int(std::log2(x))]++;
+            c[int(log2(x))]++;
             s += x;
         }
 
